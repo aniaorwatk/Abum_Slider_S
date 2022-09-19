@@ -1,5 +1,4 @@
 
-
 const slideList = [{
         img: "images/cat.jpg",
         text: 'Koty są słodkie',
@@ -29,8 +28,6 @@ const dots = [...document.querySelectorAll('.dots span')]
 const time = 4000;
 let active = 0;
 
-
-
 const changeDot = () => {
     const activeDot = dots.findIndex(dot => dot.classList.contains('active'));
     dots[activeDot].classList.remove('active');
@@ -48,7 +45,6 @@ const changeSlide = () => {
 }
 let indexInterval = setInterval(changeSlide, time);
 
-
 const keyChangeSlide = (e) => {
     if (e.keyCode == 37 || e.keyCode == 39) {
         clearInterval(indexInterval);
@@ -65,6 +61,5 @@ const keyChangeSlide = (e) => {
         indexInterval = setInterval(changeSlide, time);
     }
 }
-
 
 window.addEventListener('keydown', keyChangeSlide);
